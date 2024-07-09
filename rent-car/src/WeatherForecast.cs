@@ -1,4 +1,4 @@
-namespace TodoApi;
+namespace rentCar;
 
 public class WeatherForecast
 {
