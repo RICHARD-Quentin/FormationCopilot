@@ -34,7 +34,9 @@
 				"ms-dotnettools.csdevkit",
 				"vscjava.vscode-java-pack",
 				"ms-toolsai.jupyter",
-				"ms-python.python"
+				"ms-python.python",
+				"ritwickdey.LiveServer",
+				"samplavigne.p5-vscode"
 			]
 		}
 	},
