@@ -40,7 +40,7 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd ./completesolution/node; npm install; npm install p5; cd ../../; dotnet restore ./completesolution/dotnet/MinimalAPI.sln; dotnet restore ./exercisefiles/dotnet/MinimalAPI.sln",
+	"postCreateCommand": "cd ./p5; npm install; npm install p5; cd ..; dotnet restore ./rentcar/rent-car.sln",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
