@@ -40,16 +40,16 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd ./completesolution/node; npm install; npm install p5; cd ../../; dotnet restore ./completesolution/dotnet/MinimalAPI.sln; dotnet restore ./exercisefiles/dotnet/MinimalAPI.sln"
+	"postCreateCommand": "cd ./completesolution/node; npm install; npm install p5; cd ../../; dotnet restore ./completesolution/dotnet/MinimalAPI.sln; dotnet restore ./exercisefiles/dotnet/MinimalAPI.sln",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [5000, 5001],
-	// "portsAttributes": {
-	//		"5001": {
-	//			"protocol": "https"
-	//		}
-	// }
+	"forwardPorts": [5500, 5156, 7117],
+	"portsAttributes": {
+			"5156": {
+				"protocol": "https"
+			}
+	}
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"	
 }
