@@ -36,7 +36,8 @@
 				"ms-toolsai.jupyter",
 				"ms-python.python",
 				"ritwickdey.LiveServer",
-				"samplavigne.p5-vscode"
+				"samplavigne.p5-vscode",
+				"rangav.vscode-thunder-client"
 			]
 		}
 	},
