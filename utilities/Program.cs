@@ -12,7 +12,7 @@ public static class Utilities
 
     public static void Main()
     {
-        CsvPath = "./employees.csv";
+        string CsvPath = "./employees.csv";
 
         // TODO: Lire les employés depuis le fichier CSV et les stocker dans une liste
 
