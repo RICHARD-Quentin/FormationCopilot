@@ -1,7 +1,13 @@
 # FormationCopilot
 FormationCopilot
 
-## P5 partie
+## Partie Utilities
+
+Placez vous dans le dossier "utilities" pour accéder aux fichiers. Nous travailleront sur le fichier Program.cs
+
+Les consignes sont spécifiées dans le fichier Program.cs dans la classe Main en commentaire
+
+## Partie P5
 
 Cette section du fichier README explique comment visualiser le résultat de votre code P5. Pour cela, assurez-vous de cliquer sur l'option "Go Live" située en bas à droite de votre écran. Si cette partie affiche "Port : 5500" alors le server est déjà lancé.
 

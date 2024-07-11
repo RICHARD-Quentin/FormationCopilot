@@ -3,3 +3,6 @@ init-project:
 
 launch:
 	cd rent-car/src && dotnet run --launch-profile https
+
+launch-utils:
+	cd utilities && dotnet run
