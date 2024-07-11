@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
 using System.Text.RegularExpressions;
-public static class Utilities
+using HelloWorld;
+public static class Program
 {
-    public class Employee
-    {
-        // TODO : Ajoutez les propriétés nécessaires pour représenter un employé ( Nom, Prenom, Email, DateEntreeEntreprise, TempsTravailHebdomadaire )
-    }
 
     public static void Main()
     {
@@ -30,6 +27,34 @@ public static class Utilities
     private static List<Employee> ReadEmployeesFromCsv(string csvPath)
     {
         // TODO: Implémentez cette méthode pour lire les données d'employés depuis un fichier CSV et les retourner sous forme de liste d'objets Employee
+        if (File.Exists(csvPath))
+        {
+            List<Employee> employees = new List<Employee>();
+            using (TextFieldParser parser = new TextFieldParser(csvPath))
+            {
+                parser.TextFieldType = FieldType.Delimited;
+                parser.SetDelimiters(",");
+                while (!parser.EndOfData)
+                {
+                    string[] fields = parser.ReadFields();
+                    if (fields.Length == 4)
+                    {
+                        string name = fields[0];
+                        string email = fields[1];
+                        DateTime startDate;
+                        if (DateTime.TryParse(fields[2], out startDate))
+                        {
+                            double weeklyHours;
+                            if (double.TryParse(fields[3], out weeklyHours))
+                            {
+                                employees.Add(new Employee(name, email, startDate, weeklyHours));
+                            }
+                        }
+                    }
+                }
+            }
+            return employees;
+        }
         return new List<Employee>();
     }
 
@@ -50,6 +75,11 @@ public static class Utilities
     public static bool IsValidEmail(string email)
     {
         // TODO: Implémentez cette méthode pour valider une adresse email en utilisant une expression régulière et retourner vrai ou faux
+        // Veuillez utiliser une expression régulière pour valider l'adresse email
+        // Retourne vrai si l'adresse email est valide, sinon faux
+        Regex regex = new Regex(@"^[\w\.-]+@[\w\.-]+\.\w+$");
+        return regex.IsMatch(email);
+
         return false;
     }
 }
