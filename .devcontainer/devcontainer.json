@@ -12,7 +12,7 @@
 		"ghcr.io/devcontainers-contrib/features/mocha:2": {
 			"version": "latest"
 		},
-		"ghcr.io/devcontainers/features/docker-in-docker:1": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2.11.0": {
 			"version": "latest"
 		},
 		"ghcr.io/devcontainers/features/java:1": {
@@ -47,7 +47,7 @@
 		"dotnet restore ./rent-car.sln",
 		"dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.0",
 		"dotnet add package Microsoft.EntityFrameworkCore.Tools",
-		"make launch-database"
+		"make launch-db"
 	],
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
