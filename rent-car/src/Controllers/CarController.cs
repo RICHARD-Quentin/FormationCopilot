@@ -39,6 +39,10 @@ public class CarController : ControllerBase
         .ToArray();
     }
 
+    // Liste des voitures pas loués
+    // Liste des locations en cours
+    // Liste des voitures des voitures réservés
+    // Liste des voitures ayant moins de 1000 km
 
 }
 
