@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
 using System.Text.RegularExpressions;
-public static class Utilities
+public static class Program
 {
+
     public class Employee
     {
         // TODO : Ajoutez les propriétés nécessaires pour représenter un employé ( Nom, Prenom, Email, DateEntreeEntreprise, TempsTravailHebdomadaire )
@@ -13,6 +14,8 @@ public static class Utilities
     public static void Main()
     {
         string CsvPath = "./employees.csv";
+
+        // TODO : Implémenter une fonction pour calculer une factorielle
 
         // TODO: Lire les employés depuis le fichier CSV et les stocker dans une liste
 
@@ -25,6 +28,8 @@ public static class Utilities
         // TODO: Convertir le temps de travail hebdomadaire au format classique et afficher
 
     }
+
+    // Fonction pour calculer une factorielle
 
     // Fonction pour lire les employés depuis un fichier CSV
     private static List<Employee> ReadEmployeesFromCsv(string csvPath)
@@ -52,4 +57,7 @@ public static class Utilities
         // TODO: Implémentez cette méthode pour valider une adresse email en utilisant une expression régulière et retourner vrai ou faux
         return false;
     }
+
+    
+
 }

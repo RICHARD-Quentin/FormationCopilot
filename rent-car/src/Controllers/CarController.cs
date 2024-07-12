@@ -29,15 +29,20 @@ public class CarController : ControllerBase
         return Enumerable.Range(1, 5).Select(index => new Car
         {
             RentalStartDate = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            RentalEndDate = DateOnly.FromDateTime(DateTime.Now.AddDays(index+7)),
+            RentalEndDate = DateOnly.FromDateTime(DateTime.Now.AddDays(index + 7)),
             FuelCharge = Random.Shared.Next(10, 55),
             Horses = Random.Shared.Next(70, 250),
             extraInsurance = false,
             Type = Type[Random.Shared.Next(Type.Length)],
-            Brand= Brand[Random.Shared.Next(Brand.Length)]
+            Brand = Brand[Random.Shared.Next(Brand.Length)]
         })
         .ToArray();
     }
+
+    // Liste des voitures pas loués
+    // Liste des locations en cours
+    // Liste des voitures des voitures réservés
+    // Liste des voitures ayant moins de 1000 km
 
 }
 
