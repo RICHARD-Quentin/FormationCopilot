@@ -41,7 +41,14 @@
 			]
 		}
 	},
-	"postCreateCommand": "cd ./p5; npm install; npm install p5; cd ..; dotnet restore ./rent-car/rent-car.sln",
+	"postCreateCommand": [
+		"cd ./p5; npm install; npm install p5; cd ..",
+		"cd ./rent-car/src",
+		"dotnet restore ./rent-car.sln",
+		"dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.0",
+		"dotnet add package Microsoft.EntityFrameworkCore.Tools",
+		"make launch-database"
+	],
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
